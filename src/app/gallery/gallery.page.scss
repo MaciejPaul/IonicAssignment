@@ -1,0 +1,40 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; 
+    overflow: hidden;
+  }
+  
+
+  .image-container ion-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+  
+  ion-button {
+    --background: #3880ff; 
+    --color: #fff;
+    --border-radius: 8px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: background-color 0.3s ease;
+  }
+  
+  ion-button:hover {
+    --background: #3171e0; 
+  }
+  

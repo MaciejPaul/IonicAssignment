@@ -1,0 +1,15 @@
+{
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular"
+  ],
+  "cSpell.words": [
+    "Artic",
+    "iiif",
+    "indexeddb",
+    "Maciej",
+    "museumdb",
+    "ngsw",
+    "websql"
+  ]
+}

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">Home</ion-button>
+      <ion-button (click)="goBookmarks()">Bookmarks</ion-button>
+    </ion-buttons>
+    <ion-title>Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="imageUrl; else loading">
+    <div class="image-container">
+      <ion-img [src]="imageUrl"></ion-img>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <div class="image-container">
+      <ion-spinner name="crescent"></ion-spinner>
+      <p>Loading image...</p>
+    </div>
+  </ng-template>
+
+  <div class="button-group">
+    <ion-button expand="block" (click)="loadPrevious()" [disabled]="currentIndex <= 0">
+      Back
+    </ion-button>
+    <ion-button expand="block" (click)="loadNext()">
+      Random Image
+    </ion-button>
+    <ion-button expand="block" (click)="toggleBookmark()">
+      {{ isBookmarked() ? 'Remove Bookmark' : 'Bookmark' }}
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">Home</ion-button>
+      <ion-button (click)="goGallery()">Gallery</ion-button>
+    </ion-buttons>
+    <ion-title>Bookmarks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngIf="bookmarks.length; else noBookmarks">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let bookmark of bookmarks">
+          <div class="bookmark-item">
+            <ion-img [src]="bookmark"></ion-img>
+            <ion-button fill="clear"
+                        size="small"
+                        (click)="removeBookmark(bookmark)">
+              <ion-icon [icon]="trash"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+
+  <ng-template #noBookmarks>
+    <p>No bookmarks yet.</p>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,23 @@
+/* Ensure images are uniform */
+ion-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+
+  .bookmark-item {
+    position: relative;
+  }
+  
+  .bookmark-item ion-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #f53d3d; 
+  }
+  ion-buttons[slot="start"] ion-button {
+    margin-right: 8px;
+  }

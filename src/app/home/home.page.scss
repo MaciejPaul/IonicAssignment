@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  height: 100%;
+  background-color: #000000;
+}
+
+
+ion-toolbar {
+  --background: #111111;
+  border-bottom: 1px solid #222222;
+}
+
+ion-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff; 
+}
+
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.welcome-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.project-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #cccccc;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+}
+
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+
+.home-buttons ion-button {
+  --background: #1e88e5;  
+  --color: #ffffff;  
+  --border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 12px 24px;
+  width: auto;
+  min-width: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.home-buttons ion-button[fill="outline"] {
+  --background: transparent;
+  --border-color: #ffffff; 
+  --color: #ffffff;         
+}
+
+// hover effect
+.home-buttons ion-button:hover {
+  --background: #1565c0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
